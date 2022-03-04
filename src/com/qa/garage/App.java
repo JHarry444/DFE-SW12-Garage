@@ -1,5 +1,10 @@
 package com.qa.garage;
 
+import com.qa.garage.vehicles.Bike;
+import com.qa.garage.vehicles.Car;
+import com.qa.garage.vehicles.Lorry;
+import com.qa.garage.vehicles.Plane;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -12,7 +17,7 @@ public class App {
 		garry.addVehicle(new Plane(3, true));
 		garry.addVehicle(new Lorry(12, true));
 
-		garry.print();
+//		garry.print();
 
 		System.out.println(garry.calcBill());
 //		garry.removeById(1);

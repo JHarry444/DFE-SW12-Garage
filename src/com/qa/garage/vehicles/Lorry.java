@@ -1,4 +1,4 @@
-package com.qa.garage;
+package com.qa.garage.vehicles;
 
 public class Lorry extends Vehicle {
 

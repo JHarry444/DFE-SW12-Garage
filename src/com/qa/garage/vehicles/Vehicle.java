@@ -1,4 +1,6 @@
-package com.qa.garage;
+package com.qa.garage.vehicles;
+
+import com.qa.garage.Billable;
 
 public abstract class Vehicle implements Billable {
 

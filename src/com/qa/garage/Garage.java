@@ -3,6 +3,11 @@ package com.qa.garage;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.qa.garage.vehicles.Bike;
+import com.qa.garage.vehicles.Car;
+import com.qa.garage.vehicles.Plane;
+import com.qa.garage.vehicles.Vehicle;
+
 // interface
 public class Garage implements Billable {
 
@@ -39,9 +44,10 @@ public class Garage implements Billable {
 	}
 
 	public void removeById(int id) {
-		for (Vehicle v : this.vehicles) {
-//		for (int i = 0; i < this.vehicles.size(); i++) {
-//			Vehicle v = this.vehicles.get(i);
+//		for (Vehicle v : this.vehicles) {
+		Vehicle v = null;
+		for (int i = 0; i < this.vehicles.size(); i++) {
+			v = this.vehicles.get(i);
 			if (v.getId() == id) {
 				this.vehicles.remove(v);
 				return;
