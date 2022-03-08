@@ -27,6 +27,14 @@ public class App {
 		garry.print();
 
 		System.out.println(garry.calcBill());
+		final int id = 5;
+
+		garry.findById(id).ifPresentOrElse(System.out::println,
+				() -> System.out.println("No vehicle found with id " + id + "!"));
+
+//		opt.ifPresent(v -> System.out.println(v));
+//		Vehicle found = opt.orElse(new Bike(6, true));
+//		System.out.println(found);
 	}
 
 }

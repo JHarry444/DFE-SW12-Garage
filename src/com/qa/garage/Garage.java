@@ -2,6 +2,7 @@ package com.qa.garage;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import com.qa.garage.vehicles.Bike;
 import com.qa.garage.vehicles.Car;
@@ -41,6 +42,14 @@ public class Garage implements Billable {
 			}
 		}
 		return bill;
+	}
+
+	public Optional<Vehicle> findById(int id) {
+		for (Vehicle v : this.vehicles) {
+			if (id == v.getId())
+				return Optional.of(v);
+		}
+		return Optional.empty();
 	}
 
 	public void removeById(int id) {
